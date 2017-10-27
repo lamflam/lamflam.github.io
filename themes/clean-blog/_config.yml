@@ -10,6 +10,7 @@ menu:
 
 # Title on top left of menu. Leave empty to use main blog title
 menu_title: lamflam
+menu_logo: /img/logo.png
 
 # URL of the Home page image
 index_cover: /img/background.jpg
