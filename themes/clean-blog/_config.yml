@@ -10,10 +10,12 @@ menu:
 
 # Title on top left of menu. Leave empty to use main blog title
 menu_title: lamflam
-menu_logo: /img/logo.png
+menu_logo: true
+menu_logo_light: /img/logo_white.png
+menu_logo_dark: /img/logo_black.png
 
 # URL of the Home page image
-index_cover: /img/background.jpg
+index_cover: /img/screen.png
 
 # Default post title
 default_post_title: Untitled
@@ -21,7 +23,7 @@ default_post_title: Untitled
 # Comments. Choose one by filling up the information
 comments:
   # Disqus comments
-  disqus_shortname:
+  disqus_shortname: lamflam
   # Facebook comments
   facebook:
     appid:
@@ -38,10 +40,10 @@ addthis:
 favicon:
 
 # Social Accounts
-twitter_url:
-twitter_handle:
+twitter_url: https://twitter.com/klamflam
+twitter_handle: klamflam
 facebook_url:
 github_url: https://github.com/klugjo/hexo-theme-clean-blog
 gitlab_url:
-linkedin_url:
-mailto:
+linkedin_url: https://www.linkedin.com/in/lamflam
+mailto: k@lamfl.am
