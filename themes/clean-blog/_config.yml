@@ -2,7 +2,7 @@
 menu:
   # Home: /
   # Archives: /archives
-  Tags: /tags
+  Tags: /blog/tags
   # Categories: /categories
   Github:
     url: https://github.com/lamflam
@@ -37,7 +37,7 @@ google_analytics:
 addthis:
 
 # set your own favicon
-favicon:
+favicon: /img/favicon.png
 
 # Social Accounts
 twitter_url: https://twitter.com/klamflam

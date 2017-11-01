@@ -16,7 +16,7 @@ Below is a demo of the emulator and the source code can be found <a href="https:
 
 
 <div id="hack_emulator" style="font-size: 14px; height: 400px; width: 600px; border: none; margin: 0 auto;" />
-<script type="text/javascript" src="/script/hack_emulator/index.js"></script>
+<script type="text/javascript" src="/blog/script/hack_emulator/index.js"></script>
 
 #### Components
 <br />
