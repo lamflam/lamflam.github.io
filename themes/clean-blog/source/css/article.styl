@@ -50,12 +50,12 @@ article
           float left
 
 figure.highlight
-  background #eee
+  background #282828
   border 1px solid color-border
   margin-top 15px
   padding 7px 15px
   border-radius 2px
-  text-shadow 0 0 1px #fff
+  // text-shadow 0 0 1px #fff
   line-height 1.6
   overflow auto
   position relative
@@ -80,15 +80,15 @@ figure.highlight
     border-spacing 0
 
     .gutter
-      color color-meta
+      pre
+        color #928374
       padding-right 15px
-      border-right 1px solid color-border
+      // border-right 1px solid color-border
       text-align right
 
     .code
       padding-left 15px
-      border-left 1px solid #fff
-      color #666
+      //border-left 1px solid #fff
 
     .line
       height: 20px
@@ -99,70 +99,88 @@ figure.highlight
 pre
   // Theme: Solarized - Light
   // More theme here: http://softwaremaniacs.org/media/soft/highlight/test.html
-  .comment
-  .template_comment
-  .diff .header
-  .doctype
-  .pi
-  .lisp .string
-  .javadoc
-    color #93a1a1
-    font-style italic
+  color #ebdbb2
 
-  .keyword
-  .winutils
-  .method
-  .addition
-  .css .tag
-  .request
-  .status
-  .nginx .title
-    color #859900
-
-  .number
-  .command
-  .string
-  .tag .value
-  .phpdoc
-  .tex .formula
-  .regexp
-  .hexcolor
-    color #2aa198
-
-  .title
-  .localvars
-  .chunk
-  .decorator
-  .built_in
-  .identifier
-  .vhdl
-  .literal
-  .id
-    color #268bd2
-
-  .attribute
-  .variable
-  .lisp .body
-  .smalltalk .number
-  .constant
-  .class .title
-  .parent
-  .haskell .type
-    color #b58900
-
-  .preprocessor
-  .preprocessor .keyword
-  .shebang
-  .symbol
-  .symbol .string
-  .diff .change
-  .special
-  .attr_selector
-  .important
-  .subst
-  .cdata
-  .clojure .title
-    color #cb4b16
-
-  .deletion
-    color #dc322f
+  .subst 
+    color: #ebdbb2;
+  
+  /* Gruvbox Red */
+  .deletion,
+  .formula,
+  .keyword,
+  .link,
+  .selector-tag 
+    color: #fb4934;
+  
+  /* Gruvbox Blue */
+  .built_in,
+  .emphasis,
+  .name,
+  .quote,
+  .strong,
+  .title,
+  .variable 
+    color: #83a598;
+  
+  /* Gruvbox Yellow */
+  .attr,
+  .params,
+  .template-tag,
+  .type 
+    color: #fabd2f;
+  
+  /* Gruvbox Purple */
+  .builtin-name,
+  .doctag,
+  .literal,
+  .number 
+    color: #8f3f71;
+  
+  /* Gruvbox Orange */
+  .code,
+  .meta,
+  .regexp,
+  .selector-id,
+  .template-variable 
+    color: #fe8019;
+  
+  /* Gruvbox Green */
+  .addition,
+  .meta-string,
+  .section,
+  .selector-attr,
+  .selector-class,
+  .string,
+  .symbol 
+    color: #b8bb26;
+  
+  /* Gruvbox Aqua */
+  .attribute,
+  .bullet,
+  .class,
+  .function,
+  .function .hljs-keyword,
+  .meta-keyword,
+  .selector-pseudo,
+  .tag 
+    color: #8ec07c;
+  
+  /* Gruvbox Gray */
+  .comment 
+    color: #928374;
+  
+  /* Gruvbox Purple */
+  .link_label,
+  .literal,
+  .number 
+    color: #d3869b;
+  
+  .comment,
+  .emphasis 
+    font-style: italic;
+  
+  .section,
+  .strong,
+  .tag 
+    font-weight: bold;
+  
