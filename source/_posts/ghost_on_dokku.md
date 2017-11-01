@@ -5,6 +5,11 @@ tags:
 - dokku
 - docker
 ---
+#### Update 11/1/2017
+This post is out of date since ghost came out with v1 which doesn't work with the docker image here. I have also recently switched from self hosting a Ghost instance to hosting via [GitHub Pages](https://pages.github.com/) and [Hexo](https://hexo.io/).
+
+-------
+
 What could be more appropriate for a first post than to walk through how I set up this site? I decided to use ghost after a quick search and found this [great tutorial](https://adrianperez.org/advanced-deployment-of-ghost-in-2-minutes-with-docker/) from [Adrian Perez](https://adrianperez.org/#open) on setting it up with Docker. I already had a dokku server running so I decided to adapt his method to work a little better for dokku. I'm assuming you have some familiarity with dokku and have a dokku server running somewhere. If you have no idea what dokku is, I recommend you [check it out](http://dokku.viewdocs.io/dokku/): basically it's like Heroku but you run and manage it yourself.
 
 **Goals**
