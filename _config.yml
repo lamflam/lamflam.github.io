@@ -25,7 +25,8 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: 
+- 'script/**/*'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -61,7 +62,7 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: DD MMMM YYYY
 time_format: HH:mm:ss
 
 # Pagination
