@@ -1,0 +1,186 @@
+article .container .row img {
+  max-width: 100% !important;
+  height: auto;
+  display: inline-block;
+}
+article .container .row .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+article .container .row .video-container iframe,
+article .container .row .video-container object,
+article .container .row .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+}
+article .container .row blockquote {
+  font-style: italic;
+  font-family: font-serif;
+  font-size: 1.2em;
+  padding: 0 30px 15px;
+  text-align: center;
+}
+article .container .row blockquote footer {
+  border-top: none;
+  font-size: 0.8em;
+  line-height: 1;
+  margin: 20px 0 0;
+  padding-top: 0;
+}
+article .container .row blockquote footer cite:before {
+  content: '—';
+  color: #ccc;
+  padding: 0 0.5em;
+}
+article .container .row .pullquote {
+  float: right;
+  border: none;
+  padding: 0;
+  margin: 1em 0 0.5em 1.5em;
+  text-align: left;
+  width: 45%;
+  font-size: 1.5em;
+}
+article .container .row .pullquote.left {
+  float: left;
+}
+figure.highlight {
+  background: #282828;
+  border: 1px solid color-border;
+  margin-top: 15px;
+  padding: 7px 15px;
+  border-radius: 2px;
+  line-height: 1.6;
+  overflow: auto;
+  position: relative;
+  font-size: 0.9em;
+}
+figure.highlight figcaption {
+  color: color-meta;
+  font-family: font-mono;
+  margin-bottom: 5px;
+  text-shadow: 0 0 1px #fff;
+}
+figure.highlight figcaption a {
+  position: absolute;
+  right: 15px;
+}
+figure.highlight pre {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+figure.highlight table {
+  margin-top: 0;
+  border-spacing: 0;
+}
+figure.highlight table .gutter {
+  padding-right: 15px;
+  text-align: right;
+}
+figure.highlight table .gutter pre {
+  color: #928374;
+}
+figure.highlight table .code {
+  padding-left: 15px;
+}
+figure.highlight table .line {
+  height: 20px;
+}
+figure.highlight table .line.marked {
+  background: #d6d6d6;
+}
+pre {
+  color: #ebdbb2;
+/* Gruvbox Red */
+/* Gruvbox Blue */
+/* Gruvbox Yellow */
+/* Gruvbox Purple */
+/* Gruvbox Orange */
+/* Gruvbox Green */
+/* Gruvbox Aqua */
+/* Gruvbox Gray */
+/* Gruvbox Purple */
+}
+pre .subst {
+  color: #ebdbb2;
+}
+pre .deletion,
+pre .formula,
+pre .keyword,
+pre .link,
+pre .selector-tag {
+  color: #fb4934;
+}
+pre .built_in,
+pre .emphasis,
+pre .name,
+pre .quote,
+pre .strong,
+pre .title,
+pre .variable {
+  color: #83a598;
+}
+pre .attr,
+pre .params,
+pre .template-tag,
+pre .type {
+  color: #fabd2f;
+}
+pre .builtin-name,
+pre .doctag,
+pre .literal,
+pre .number {
+  color: #8f3f71;
+}
+pre .code,
+pre .meta,
+pre .regexp,
+pre .selector-id,
+pre .template-variable {
+  color: #fe8019;
+}
+pre .addition,
+pre .meta-string,
+pre .section,
+pre .selector-attr,
+pre .selector-class,
+pre .string,
+pre .symbol {
+  color: #b8bb26;
+}
+pre .attribute,
+pre .bullet,
+pre .class,
+pre .function,
+pre .function .hljs-keyword,
+pre .meta-keyword,
+pre .selector-pseudo,
+pre .tag {
+  color: #8ec07c;
+}
+pre .comment {
+  color: #928374;
+}
+pre .link_label,
+pre .literal,
+pre .number {
+  color: #d3869b;
+}
+pre .comment,
+pre .emphasis {
+  font-style: italic;
+}
+pre .section,
+pre .strong,
+pre .tag {
+  font-weight: bold;
+}

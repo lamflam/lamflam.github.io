@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="About a year ago a friend told me about a great book called The Elements of Computing Systems: Building a Modern Computer from First Principles. As a ">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Kevin LaFlamme">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="a hack emulator in javascript"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="kevin laflamme"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="klamflam>" />
+    
+
+    <!-- Title -->
+    
+    <title>a hack emulator in javascript - kevin laflamme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-109333303-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/img/favicon.png">
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="/img/logo_white.png"></source>
+                        <img src="/img/logo_black.png"></img>
+                    </picture>
+                
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/lamflam">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/screen.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>a hack emulator in javascript</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            16 September 2016
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/nand2tetris/">#nand2tetris</a> <a href="/tags/javascript/">#javascript</a> <a href="/tags/emulator/">#emulator</a> <a href="/tags/hack/">#hack</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>About a year ago <a href="http://www.jamesseibel.com" target="_blank" rel="external">a friend</a> told me about a great book called <a href="http://www.amazon.com/gp/product/0262640686/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0262640686&linkCode=as2&tag=lamflam-20&linkId=07d08d27757d3c2f451aa0a533038c05" target="_blank" rel="external">The Elements of Computing Systems: Building a Modern Computer from First Principles</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=lamflam-20&l=am2&o=1&a=0262640686" width="1" height="1" border="0" alt="" style="display: inline-block; border:none !important; margin:0px !important;">. As a professional developer from a math instead of CS background, this book filled in the missing links in my mental model of the bridge between hardware and software and I highly recommend it.</p>
+<p>After finishing the assembler project I thought it would be interesting to build a Hack (the name of the CPU architecture made for the book) emulator that could run in a browser. I’ve always been curious about how to actually implement an emulator and thought that this would be a simple one to start with. </p>
+<h4 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h4><p>Below is a demo of the emulator and the source code can be found <a href="https://github.com/lamflam/hack_emulator" target="_blank" rel="external">here</a>. For those that haven’t gone through the book, you can download <a href="https://raw.githubusercontent.com/lamflam/nand2tetris/develop/projects/05/Fill.hack" target="_blank" rel="external">Fill.hack</a> or <a href="https://raw.githubusercontent.com/lamflam/nand2tetris/develop/projects/05/Pong.hack" target="_blank" rel="external">Pong.hack</a> and then load it below. For Pong, you may need to tweak the settings a little to make it playable.</p>
+<p><div id="hack_emulator" style="font-size: 14px; height: 400px; width: 600px; border: none; margin: 0 auto;"></div></p>
+<script type="text/javascript" src="/blog/script/hack_emulator/index.js"></script>
+
+<h4 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h4><p><br></p>
+<h5 id="The-CPU"><a href="#The-CPU" class="headerlink" title="The CPU"></a>The CPU</h5><p>The Hack CPU instruction set (described in Chapter 4 of the book) consists of an A-instruction that loads a 15 bit address into register A and 28 different C-instructions, each with destination and jump bits that control where the output is stored and where to load the next instruction from. There are two registers, A and D, one pseudo-register M that represents the value at the address in register A, and the program counter. We initialize these values in the constructor of the CPU and add some setters/getters for ones that need to be exposed externally:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">    <span class="keyword">this</span>._reg = &#123;</div><div class="line">            a: <span class="number">0</span>,</div><div class="line">            d: <span class="number">0</span>,</div><div class="line">            pc: <span class="number">0</span></div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        <span class="comment">// The current instruction.</span></div><div class="line">        <span class="keyword">this</span>._ins = <span class="number">0x0</span>;</div><div class="line">        <span class="keyword">this</span>._clock = &#123; <span class="attr">ticks</span>: <span class="number">0</span> &#125;;</div><div class="line">    &#125;</div><div class="line">...</div></pre></td></tr></table></figure>
+<p>Instead of hardcoding all 253 possible opcodes, we can encode the 28 different compute instructions and process the destination and jump bits separately. This gives a total of 30 opcodes (28 + A-instruction + NOOP).
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">get opCode() &#123;</div><div class="line">    <span class="comment">// For C instructions, shift to grab the leftmost 10 bits, otherwise</span></div><div class="line">    <span class="comment">// use the hardcoded A instruction value.</span></div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>._ins &gt;= <span class="number">0x8000</span>) &#123;</div><div class="line">            <span class="keyword">return</span> CPU.OPCODES[<span class="keyword">this</span>._ins &gt;&gt; <span class="number">6</span>];</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> CPU.OPCODES.LOAD_A;</div><div class="line">    &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">get dest() &#123;</div><div class="line">    <span class="comment">// For C instructions, mask off the first 10 bits (the opcode portion)</span></div><div class="line">    <span class="comment">// as well as the last 3 bits (the jump portion). This leaves the</span></div><div class="line">    <span class="comment">// 3 bits corresponding to the 3 possible destination registers.</span></div><div class="line">    <span class="comment">// For A instructions, set the A register bit.</span></div><div class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>._ins &gt;= <span class="number">0x8000</span>) &#123;</div><div class="line">        <span class="keyword">return</span> (<span class="keyword">this</span>._ins &gt;&gt; <span class="number">3</span>) &amp; <span class="number">0b111</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0b100</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">get jump() &#123;</div><div class="line">    <span class="comment">// For C instructions, mask off all but the rightmost 3 bits. These 3</span></div><div class="line">    <span class="comment">// bits determine which comparison operator to use when deciding whether</span></div><div class="line">    <span class="comment">// or not to jump to the address specified in the A register.</span></div><div class="line">    <span class="comment">// For A instructions, never jump.</span></div><div class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>._ins &gt;= <span class="number">0x8000</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>._ins &amp; <span class="number">0b111</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0b000</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Now that the instruction parsing is all set, we can simulate a single CPU tick quite easily.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">tick() &#123;</div><div class="line">    <span class="comment">// Read in the current instruction</span></div><div class="line">    <span class="keyword">this</span>._ins = <span class="keyword">this</span>._mmu.readWordROM(<span class="keyword">this</span>.PC);</div><div class="line">    <span class="keyword">this</span>._clock.ticks++;</div><div class="line"></div><div class="line">    <span class="comment">// Don't do anything if we are past the end of the ROM.</span></div><div class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>._ins &lt; <span class="number">0</span>) <span class="keyword">return</span>;</div><div class="line"></div><div class="line">    <span class="comment">// Dispatch the opcode to retrieve the current value</span></div><div class="line">    <span class="keyword">let</span> word = <span class="keyword">this</span>[<span class="keyword">this</span>.opCode]();</div><div class="line"></div><div class="line">    <span class="comment">// dest has three bits corresponding to the three registers A, D and M.</span></div><div class="line">    <span class="comment">// Store `word` in any destination with its bit set.</span></div><div class="line">    <span class="keyword">let</span> dest = <span class="keyword">this</span>.dest;</div><div class="line">    <span class="keyword">if</span> (dest &amp; <span class="number">0b1</span>) &#123;</div><div class="line">        <span class="keyword">this</span>.M = word;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (dest &amp; <span class="number">0b10</span>) &#123;</div><div class="line">        <span class="keyword">this</span>.D = word;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (dest &amp; <span class="number">0b100</span>) &#123;</div><div class="line">        <span class="keyword">this</span>.A = word;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// jump has three bits corresponding to &lt;, ==, and &gt; operators.</span></div><div class="line">    <span class="comment">// The selected operator(s) compares the current value and 0, and</span></div><div class="line">    <span class="comment">// then we set the program counter accordingly.</span></div><div class="line">    <span class="keyword">let</span> jump = <span class="keyword">this</span>.jump;</div><div class="line">    <span class="keyword">if</span> (((jump &amp; <span class="number">0b100</span>) &amp;&amp; word &lt; <span class="number">0</span>) ||</div><div class="line">        ((jump &amp; <span class="number">0b10</span>) &amp;&amp; word == <span class="number">0</span>) ||</div><div class="line">        ((jump &amp; <span class="number">0b1</span>) &amp;&amp; word &gt; <span class="number">0</span>)) &#123;</div><div class="line">            <span class="keyword">this</span>.PC = <span class="keyword">this</span>.A;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="comment">// If the jump comparison fails, just increment the counter.</span></div><div class="line">        <span class="keyword">this</span>.PC = <span class="keyword">this</span>.PC + <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The only thing left is to implement each of the opcodes which are very straightforward. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">    <span class="comment">// this.D and this.A are setters for this._reg.a and this._reg.d</span></div><div class="line">    ADD_1D() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.D + <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ADD_1A() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.A + <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">...</div></pre></td></tr></table></figure>
+<p><br></p>
+<h5 id="MMU"><a href="#MMU" class="headerlink" title="MMU"></a>MMU</h5><p>The MMU controls writing and reading memory. The Hack computer has a ROM and RAM each consisting of 32K 16-bit addressable slots. The ROM is readonly except for loading a new program. The RAM consists of normal memory as well as memory maps for the screen (<code>0x4000 - 0x5FFF</code>) and the keyboard (<code>0x6000</code>). Addresses <code>0x6001 - 0x7FFF</code> are normal RAM again.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">MMU</span> </span>&#123;</div><div class="line">    ...</div><div class="line"></div><div class="line">    load(code) &#123;</div><div class="line">        <span class="comment">// Code should be a string where each line contains</span></div><div class="line">        <span class="comment">// 16 1s and 0s representing the instruction.</span></div><div class="line">        <span class="keyword">this</span>._rom = [];</div><div class="line">        code.split(<span class="string">'\n'</span>).forEach(<span class="function">(<span class="params">ins, i</span>) =&gt;</span> &#123;</div><div class="line">            <span class="keyword">this</span>._rom[i] = <span class="built_in">parseInt</span>(ins, <span class="number">2</span>);</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...</div><div class="line"></div><div class="line">    writeWord(addr, word) &#123;</div><div class="line">        <span class="keyword">if</span> (addr &lt; <span class="number">0x4000</span> || (addr &gt; <span class="number">0x6000</span> &amp;&amp; addr &lt; <span class="number">0x8000</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>._ram[addr] = word;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (addr &lt; <span class="number">0x6000</span>) &#123;</div><div class="line">            <span class="comment">// Adjust the address because the gPU doesn't know about the mapped</span></div><div class="line">            <span class="comment">// address range.</span></div><div class="line">            <span class="keyword">this</span>._gpu.writeWord(addr - <span class="number">0x4000</span>, word);</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (addr == <span class="number">0x6000</span>) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>._kb.writeWord(word);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">`Memory Access Violation: <span class="subst">$&#123;addr&#125;</span>`</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><br></p>
+<h5 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h5><p>There is no real GPU in the Hack computer, but this module handles writing the data from the memory map to the screen. The Hack screen is 512 pixels wide by 256 pixels high where each pixel is represented by a single bit. We represent the screen with a <code>canvas</code> and use an <code>ImageData</code> object to address and update each pixel.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">GPU</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>(canvas) &#123;</div><div class="line">        <span class="keyword">this</span>._ram = [];</div><div class="line">        <span class="keyword">if</span> (canvas) &#123;</div><div class="line">            canvas.height = GPU.rows;</div><div class="line">            canvas.width = GPU.cols;</div><div class="line">            <span class="keyword">this</span>._ctx = canvas.getContext(<span class="string">"2d"</span>);</div><div class="line">            <span class="keyword">this</span>._img = <span class="keyword">this</span>._ctx.createImageData(GPU.cols, GPU.rows);</div><div class="line">            <span class="keyword">this</span>.reset();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...</div><div class="line"></div><div class="line">    writeWord(addr, word) &#123;</div><div class="line">        <span class="keyword">this</span>._ram[addr] = word;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>._ctx) &#123;</div><div class="line">            <span class="comment">// Each addr consistents of 16 pixels each represented as 4 elements</span></div><div class="line">            <span class="comment">// in the array, so the starting offset is addr * 16 * 4.</span></div><div class="line">            <span class="keyword">let</span> base = addr * <span class="number">16</span> * <span class="number">4</span>;</div><div class="line"></div><div class="line">            <span class="comment">// Check each bit of this value and set the corresponding pixel</span></div><div class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>, mask = <span class="number">1</span>; i &lt; <span class="number">16</span>; i++, mask &lt;&lt; <span class="number">1</span>) &#123;</div><div class="line">                <span class="keyword">let</span> val = (word &amp; mask) ? <span class="number">0</span> : <span class="number">255</span>;</div><div class="line">                <span class="keyword">let</span> o = base + (i * <span class="number">4</span>);</div><div class="line">                <span class="keyword">this</span>._img.data[o] = val;</div><div class="line">                <span class="keyword">this</span>._img.data[o+<span class="number">1</span>] = val;</div><div class="line">                <span class="keyword">this</span>._img.data[o+<span class="number">2</span>] = val;</div><div class="line">                <span class="keyword">this</span>._img.data[o+<span class="number">3</span>] = <span class="number">255</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><br></p>
+<h5 id="Keyboard"><a href="#Keyboard" class="headerlink" title="Keyboard"></a>Keyboard</h5><p>The keyboard is a very simple memory map of a single byte at address 0x6000. There are a few non-standard key mappings defined that we can easily translate to their corresponding values.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">KB</span> </span>&#123;</div><div class="line"></div><div class="line">    get map() &#123;</div><div class="line">        <span class="comment">// Key table described in Chapter 4</span></div><div class="line">        <span class="comment">// Maps the keyCode used by the browser to the values expected by</span></div><div class="line">        <span class="comment">// the hack CPU.</span></div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="number">13</span>: <span class="number">128</span>,</div><div class="line">            <span class="number">8</span>:  <span class="number">129</span>,</div><div class="line">            <span class="number">37</span>: <span class="number">130</span>,</div><div class="line">            <span class="number">38</span>: <span class="number">131</span>,</div><div class="line">            <span class="number">39</span>: <span class="number">132</span>,</div><div class="line">            <span class="number">40</span>: <span class="number">133</span>,</div><div class="line">            <span class="number">36</span>: <span class="number">134</span>,</div><div class="line">            <span class="number">35</span>: <span class="number">135</span>,</div><div class="line">            <span class="number">33</span>: <span class="number">136</span>,</div><div class="line">            <span class="number">24</span>: <span class="number">137</span>,</div><div class="line">            <span class="number">45</span>: <span class="number">138</span>,</div><div class="line">            <span class="number">46</span>: <span class="number">139</span>,</div><div class="line">            <span class="number">27</span>: <span class="number">140</span>,</div><div class="line">            <span class="number">112</span>: <span class="number">141</span>,</div><div class="line">            <span class="number">113</span>: <span class="number">142</span>,</div><div class="line">            <span class="number">114</span>: <span class="number">143</span>,</div><div class="line">            <span class="number">115</span>: <span class="number">144</span>,</div><div class="line">            <span class="number">116</span>: <span class="number">145</span>,</div><div class="line">            <span class="number">117</span>: <span class="number">146</span>,</div><div class="line">            <span class="number">118</span>: <span class="number">147</span>,</div><div class="line">            <span class="number">119</span>: <span class="number">148</span>,</div><div class="line">            <span class="number">120</span>: <span class="number">149</span>,</div><div class="line">            <span class="number">121</span>: <span class="number">150</span>,</div><div class="line">            <span class="number">122</span>: <span class="number">151</span>,</div><div class="line">            <span class="number">123</span>: <span class="number">152</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">    writeWord(word) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>._key = <span class="keyword">this</span>.map[word] || word;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><br></p>
+<h4 id="The-Emulator"><a href="#The-Emulator" class="headerlink" title="The Emulator"></a>The Emulator</h4><h5 id="Putting-it-all-together"><a href="#Putting-it-all-together" class="headerlink" title="Putting it all together"></a>Putting it all together</h5><p>Lastly, we need to hook the components together so that the Hack computer runs and renders to the screen. After trying a few different rendering methods, I decided to do a full screen render at a user defined refresh rate using <code>requestAnimationFrame</code> because it gave better results than rendering each pixel on write.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">render(ms) &#123;</div><div class="line">    <span class="comment">// Rendering on the full canvas on every frame could be expensive,</span></div><div class="line">    <span class="comment">// so only render every refreshMS milliseconds.</span></div><div class="line">    <span class="keyword">if</span> ((ms - <span class="keyword">this</span>._lastRender) &gt; <span class="keyword">this</span>._refreshMS) &#123;</div><div class="line">        <span class="keyword">this</span>._gpu.render();</div><div class="line">        <span class="keyword">this</span>._lastRender = ms;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// Render again</span></div><div class="line">    <span class="keyword">if</span> (!<span class="keyword">this</span>._stop) requestAnimationFrame(<span class="keyword">this</span>._renderer);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Using a <code>setTimeout</code> per CPU tick is WAY too long even with a timeout of 0. Instead in each <code>setTimeout</code> call we run a configurable number of ticks so that we can control the CPU speed a little better since Hack computer doesn’t have a real timing mechanism.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">step(force) &#123;</div><div class="line">    <span class="comment">// Run through this._ticks CPU cycles. We need to stop looping and</span></div><div class="line">    <span class="comment">// use setTimeout every once in a while to make sure that our event</span></div><div class="line">    <span class="comment">// handlers have a chance to run to register keypresses, etc.</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>._ticks; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (!<span class="keyword">this</span>._stop || force) <span class="keyword">this</span>._cpu.tick();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (force) &#123;</div><div class="line">        <span class="keyword">this</span>.render(<span class="keyword">this</span>._lastRender + <span class="keyword">this</span>._refreshMS + <span class="number">1</span>);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">this</span>._timer = setTimeout(<span class="keyword">this</span>._stepper, <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                        <li>
+                            <a href="https://twitter.com/klamflam" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="https://www.linkedin.com/in/lamflam" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="mailto:k@lamfl.am" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 Kevin LaFlamme<br></p>
+                <!-- <p class="copyright text-muted">Original Theme <a target="_blank"
+                        href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a
+                        href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p> -->
+                <!-- <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by
+                    <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p> -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'lamflam';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>

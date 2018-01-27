@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Update 11/1/2017This post is out of date since ghost came out with v1 which doesn’t work with the docker image here. I have also recently switched fro">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Kevin LaFlamme">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="ghost on dokku"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="kevin laflamme"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="klamflam>" />
+    
+
+    <!-- Title -->
+    
+    <title>ghost on dokku - kevin laflamme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-109333303-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="/img/favicon.png">
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="/img/logo_white.png"></source>
+                        <img src="/img/logo_black.png"></img>
+                    </picture>
+                
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/blog/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/lamflam">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/screen.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>ghost on dokku</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            09 August 2016
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/dokku/">#dokku</a> <a href="/tags/docker/">#docker</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h4 id="Update-11-1-2017"><a href="#Update-11-1-2017" class="headerlink" title="Update 11/1/2017"></a>Update 11/1/2017</h4><p>This post is out of date since ghost came out with v1 which doesn’t work with the docker image here. I have also recently switched from self hosting a Ghost instance to hosting via <a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a> and <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>.</p>
+<hr>
+<p>What could be more appropriate for a first post than to walk through how I set up this site? I decided to use ghost after a quick search and found this <a href="https://adrianperez.org/advanced-deployment-of-ghost-in-2-minutes-with-docker/" target="_blank" rel="external">great tutorial</a> from <a href="https://adrianperez.org/#open" target="_blank" rel="external">Adrian Perez</a> on setting it up with Docker. I already had a dokku server running so I decided to adapt his method to work a little better for dokku. I’m assuming you have some familiarity with dokku and have a dokku server running somewhere. If you have no idea what dokku is, I recommend you <a href="http://dokku.viewdocs.io/dokku/" target="_blank" rel="external">check it out</a>: basically it’s like Heroku but you run and manage it yourself.</p>
+<p><strong>Goals</strong></p>
+<ul>
+<li>Configuration via environment variables instead of code and hardcoded values (config changes should not require a code change)</li>
+<li>Persistent storage that would be easy to scale to multiple web workers</li>
+</ul>
+<p>Since dokku now supports Dockerfile and docker image deployments, I first tried to use the official ghost image on docker hub but ran into a few issues. The main issue with this is that in order to use a custom config.js, you need to place the custom <code>config.js</code> into your content directory (discussed below). This might be fine for you, but I didn’t like the idea that to deploy a change I would need push to git and then log into the server and pull it down. Wouldn’t it be better if <code>git push dokku master</code> still worked?</p>
+<p>The other reason I didn’t like the original setup is that I wanted to set my configuration the way I normally do via <code>dokku config:set blog URL=&lt;my-site&gt; ...</code>. In order to do that, I created a new Dockerfile that inherits from the main ghost Dockerfile but it includes a <code>config.js</code> that loads from the environment instead. This <code>config.js</code> is placed in the ghost source code folder instead of content because it is no longer customized per deployment.</p>
+<p><strong>Deploying</strong></p>
+<p>Now to set up the app:</p>
+<ul>
+<li>Log into your dokku server and create the app</li>
+<li>Create a storage mount and link it to your new app at <code>/var/lib/ghost</code><ul>
+<li>This will create a directory on your host server that will be mounted into your ghost container and survive restarts/redeploys. This directory is where you will install your themes, and where images are stored by default.</li>
+</ul>
+</li>
+<li>Create a database and link it to your newly created app <ul>
+<li>The default <code>sqlite</code> db will persist in your storage mount, but a db may make it easier to scale the app in the future</li>
+</ul>
+</li>
+<li>Deploy the app</li>
+<li>Proxy the port</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Create the app</span></div><div class="line">dokku apps:create blog</div><div class="line"></div><div class="line"><span class="comment"># Create the storage and mount it</span></div><div class="line">mkdir -p  /var/lib/dokku/data/storage/blog</div><div class="line">chown -R 32767:32767 /var/lib/dokku/data/storage/ghost</div><div class="line">dokku storage:mount blog /var/lib/dokku/data/storage/ghost:/var/lib/ghost</div><div class="line"></div><div class="line"><span class="comment"># Deploy with git/Dockerfile</span></div><div class="line">git <span class="built_in">clone</span> git@github.com:lamflam/ghost_dokku.git</div><div class="line"><span class="built_in">cd</span> ghost_dokku</div><div class="line">git remote add dokku dokku@&lt;your_domain&gt;</div><div class="line">git push dokku master</div></pre></td></tr></table></figure>
+<p>or<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deploy with docker image (I didn't actually test this one)</span></div><div class="line">docker pull lamflam/ghost_dokku</div><div class="line">docker tag lamflam/ghost_dokku:latest dokku/blog:latest</div><div class="line">dokku tags:deploy blog latest</div></pre></td></tr></table></figure></p>
+<p><strong>Themes</strong></p>
+<p>Installing themes is very easy to do from your host server because of the mounted storage directory. All you need to do is unzip the theme into the themes directory. If you have the URL for your theme, it’s as easy as:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /var/lib/dokku/data/storage/ghost/themes</div><div class="line">curl -L http://path/to/theme.zip &gt;&gt; theme.zip</div><div class="line">unzip theme.zip</div><div class="line">rm theme.zip</div><div class="line">dokku ps:restart blog</div></pre></td></tr></table></figure>
+<p>Now refresh your blog settings page and the theme should be available!</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                        <li>
+                            <a href="https://twitter.com/klamflam" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="https://www.linkedin.com/in/lamflam" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="mailto:k@lamfl.am" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2018 Kevin LaFlamme<br></p>
+                <!-- <p class="copyright text-muted">Original Theme <a target="_blank"
+                        href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a
+                        href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p> -->
+                <!-- <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by
+                    <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p> -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'lamflam';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>
