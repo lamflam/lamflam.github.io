@@ -1,5 +1,5 @@
 ---
-title: A Hack Emulator in Javascript
+title: a hack emulator in javascript
 date: 2016/9/16 18:50:00
 tags:
 - nand2tetris
