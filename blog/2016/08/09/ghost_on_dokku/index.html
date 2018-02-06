@@ -219,7 +219,8 @@
 <li>Proxy the port</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Create the app</span></div><div class="line">dokku apps:create blog</div><div class="line"></div><div class="line"><span class="comment"># Create the storage and mount it</span></div><div class="line">mkdir -p  /var/lib/dokku/data/storage/blog</div><div class="line">chown -R 32767:32767 /var/lib/dokku/data/storage/ghost</div><div class="line">dokku storage:mount blog /var/lib/dokku/data/storage/ghost:/var/lib/ghost</div><div class="line"></div><div class="line"><span class="comment"># Deploy with git/Dockerfile</span></div><div class="line">git <span class="built_in">clone</span> git@github.com:lamflam/ghost_dokku.git</div><div class="line"><span class="built_in">cd</span> ghost_dokku</div><div class="line">git remote add dokku dokku@&lt;your_domain&gt;</div><div class="line">git push dokku master</div></pre></td></tr></table></figure>
-<p>or<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deploy with docker image (I didn't actually test this one)</span></div><div class="line">docker pull lamflam/ghost_dokku</div><div class="line">docker tag lamflam/ghost_dokku:latest dokku/blog:latest</div><div class="line">dokku tags:deploy blog latest</div></pre></td></tr></table></figure></p>
+<p>or
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Deploy with docker image (I didn't actually test this one)</span></div><div class="line">docker pull lamflam/ghost_dokku</div><div class="line">docker tag lamflam/ghost_dokku:latest dokku/blog:latest</div><div class="line">dokku tags:deploy blog latest</div></pre></td></tr></table></figure></p>
 <p><strong>Themes</strong></p>
 <p>Installing themes is very easy to do from your host server because of the mounted storage directory. All you need to do is unzip the theme into the themes directory. If you have the URL for your theme, it’s as easy as:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /var/lib/dokku/data/storage/ghost/themes</div><div class="line">curl -L http://path/to/theme.zip &gt;&gt; theme.zip</div><div class="line">unzip theme.zip</div><div class="line">rm theme.zip</div><div class="line">dokku ps:restart blog</div></pre></td></tr></table></figure>
@@ -234,7 +235,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     
     <hr />
-    <h3>Comments:</h3>
+    <h3>Kommentare:</h3>
     <div id="disqus_thread">
         <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
